@@ -47,8 +47,8 @@ answers[2] = prompt("Укажите год рождения", "");
 console.log(answers);
 console.log(`Пользователь: ${answers[0]} ${answers[1]}`) */
 
-let incr = 10,
-    decr = 10;
+/* let incr = 10,
+//    decr = 10;
 
 //incr++;
 //decr--;
@@ -59,6 +59,27 @@ console.log(--decr); //префиксная форма
 console.log(incr);
 console.log(decr);
 
-console.log(7%3);
+console.log(7%3); */
+
+// 012 Практика, ч.1. Начинаем создавать приложение *******************************************
 
 
+const numberofFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+
+const personalMovieDB = {
+  count: numberofFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
+
+const a = prompt("Один из последних просмотренных фильмов", ""),
+    b = prompt("На сколько Вы его оцените?", ""),
+    c = prompt("Один из последних просмотренных фильмов", ""),
+    d = prompt("На сколько Вы его оцените?", "");
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
