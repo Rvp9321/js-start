@@ -63,7 +63,7 @@ console.log(7%3); */
 
 // 012 Практика, ч.1. Начинаем создавать приложение *******************************************
 
-
+/* 
 const numberofFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
@@ -82,4 +82,6 @@ const a = prompt("Один из последних просмотренных ф
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
-console.log(personalMovieDB);
+console.log(personalMovieDB); */
+
+//013 Условия
