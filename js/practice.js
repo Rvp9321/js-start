@@ -28,6 +28,7 @@ console.log(personalMovieDB);
 
 // 015 Практика, ч2. Применяем условия и циклы ***********************************************
 
+/* 
 const numberofFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
@@ -37,11 +38,59 @@ const personalMovieDB = {
   genres: [],
   privat: false
 };
-
+// Цикл for
 for (let i = 0; i < 2; i++) {
   const a = prompt("Один из последних просмотренных фильмов", ""),
         b = prompt("На сколько Вы его оцените?", "");
-  if (a != "" && a != 'null' && a.length <)
-  personalMovieDB.movies[a] = b;  
+  if (a != "" && a != null && a.length < 50 && b != "" && b != null) {
+    personalMovieDB.movies[a] = b;   
+    console.log("done");
+  } else {
+    console.log("error");
+    i--;
+  }      
 }
 console.log(personalMovieDB);
+ */
+
+// Цикл While
+/*
+let i = 0;
+while (i < 2) {
+  let a = prompt("#2.Один из последних просмотренных фильмов", ""),
+      b = prompt("#2.На сколько Вы его оцените?", "");
+  if (a != "" && a != null && a.length < 50 && b != "" && b != null) {
+  personalMovieDB.movies[a] = b;
+  i++;
+  } else {
+    console.log("error");
+    i--;
+  }
+}
+console.log(personalMovieDB);
+*/
+
+// Цикл Do While
+/*
+let i = 0;
+do {  
+  let a = prompt("#2.Один из последних просмотренных фильмов", ""),
+      b = prompt("#2.На сколько Вы его оцените?", "");
+  personalMovieDB.movies[a] = b;
+  i++;  
+} while (i < 2);
+console.log(personalMovieDB);
+*/
+/* 
+if (numberofFilms < 10) {
+  console.log('Просмотрено довольно мало фильмов');
+} else if (numberofFilms >= 10 && numberofFilms < 30) {
+  console.log('Вы классический зритель');
+} else if (numberofFilms >= 30) {
+  console.log('Вы киноман');
+} else {
+  console.log("Ошибка");
+}
+ */
+
+
