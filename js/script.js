@@ -85,8 +85,7 @@ personalMovieDB.movies[c] = d;
 console.log(personalMovieDB); */
 
 //Функции
-
-
+/*
 let val = 7;
 function createAdder() {
   function addNumbers(a, b) {
@@ -118,3 +117,25 @@ console.log('example increment', c1, c2, c3);
 
 const logg = "workpackage summary";
 console.log(logg.indexOf("a"));
+*/
+
+/* let num = "letter";
+console.log(isNaN(num)); */
+
+/* let numberofFilms;
+
+const personalMovieDB = {
+  count: numberofFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
+
+function showMyDB () {
+  if (personalMovieDB.privat == false) {
+    console.log("главный объект программы");
+  }
+}
+
+showMyDB (); */

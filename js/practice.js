@@ -94,3 +94,77 @@ if (numberofFilms < 10) {
  */
 
 
+// 018 Практика , ч3. Используем функции
+
+let numberofFilms;
+
+function start() {
+  numberofFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+
+  while (numberofFilms == "" || numberofFilms == null || isNaN(numberofFilms)) {
+    numberofFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+  }
+}
+
+start();
+
+const personalMovieDB = {
+  count: numberofFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
+
+function rememberMyFilms() {
+  for (let i = 0; i < 2; i++) {
+    const a = prompt("Один из последних просмотренных фильмов", ""),
+          b = prompt("На сколько Вы его оцените?", "");
+    if (a != "" && a != null && a.length < 50 && b != "" && b != null) {
+      personalMovieDB.movies[a] = b;   
+      console.log("done");
+    } else {
+      console.log("error");
+      i--;
+    }      
+  }
+}
+
+rememberMyFilms();
+
+// Задание №3
+
+function writeYourGenres () {
+  for (let i = 0; i < 3; i++) {
+    const a = prompt(`Ваш любимый жанр под номером ${i+1}?`, "");
+    personalMovieDB.genres = a;
+
+  }
+
+}
+
+writeYourGenres ();
+
+function detectPersonalLevel () {
+  if (numberofFilms < 10) {
+    console.log('Просмотрено довольно мало фильмов');
+  } else if (numberofFilms >= 10 && numberofFilms < 30) {
+    console.log('Вы классический зритель');
+  } else if (numberofFilms >= 30) {
+    console.log('Вы киноман');
+  } else {
+    console.log("Ошибка");
+  }
+}
+
+detectPersonalLevel ();
+
+console.log(personalMovieDB);
+
+function showMyDB () {
+  if (personalMovieDB.privat == false) {
+    console.log("главный объект программы");
+  }
+}
+
+showMyDB ();
