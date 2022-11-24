@@ -113,7 +113,7 @@ const personalMovieDB = {
   movies: {},
   actors: {},
   genres: [],
-  privat: false
+  privat: false,
 };
 
 function rememberMyFilms() {
@@ -130,20 +130,7 @@ function rememberMyFilms() {
   }
 }
 
-rememberMyFilms();
-
-// Задание №3
-
-function writeYourGenres () {
-  for (let i = 0; i < 3; i++) {
-    const a = prompt(`Ваш любимый жанр под номером ${i+1}?`, "");
-    personalMovieDB.genres = a;
-
-  }
-
-}
-
-writeYourGenres ();
+//rememberMyFilms();
 
 function detectPersonalLevel () {
   if (numberofFilms < 10) {
@@ -159,12 +146,32 @@ function detectPersonalLevel () {
 
 detectPersonalLevel ();
 
-console.log(personalMovieDB);
+
+/*//Режиссёрская версия:
+
+function showMyDB (hidden) {
+  if(!hidden) {
+    console.log(personalMovieDB);
+  }
+}
+showMyDB (personalMovieDB.privat); */
+
 
 function showMyDB () {
   if (personalMovieDB.privat == false) {
-    console.log("главный объект программы");
+    console.log(personalMovieDB);
   }
 }
 
 showMyDB ();
+
+
+function writeYourGenres () {
+  for (let i = 0; i < 3; i++) {
+    /* const a = prompt(`Ваш любимый жанр под номером ${i+1}?`, "");    
+      personalMovieDB.genres[i] = a; */     
+      personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером ${i+1}?`); 
+  }
+}
+
+writeYourGenres ();
