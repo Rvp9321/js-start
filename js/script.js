@@ -139,3 +139,57 @@ function showMyDB () {
 }
 
 showMyDB (); */
+
+
+//020 020 Объекты, деструктуризация объектов (ES6) *************************
+
+/*
+const myHouse = {
+  type: "private",
+  main: "block",
+  secondary: "wood",
+  balcony: true,
+  basement: true,
+  interior: {
+    type: "antique",
+    material: "wood",
+    additionals: "steel",
+    color: "brown",
+  }
+};
+
+//console.log((Object.keys(myHouse).length) + (Object.keys(myHouse.interior).length));
+
+for (let key in myHouse) {
+  console.log(`ключ: ${key}: ${myHouse[key]}`);
+}
+console.log(Object.keys(myHouse).length);
+
+for (let key2 in myHouse.interior) {
+  console.log(`ключ: ${key2}: ${myHouse.interior[key2]}`);
+}
+console.log(Object.keys(myHouse.interior).length);
+*/
+
+/*
+const myHouse = {
+  type: "private",
+  main: "block",
+  secondary: "wood",
+  balcony: true,
+  basement: true,
+  interior: {
+    type: "antique",
+    material: "wood",
+    additionals: "steel",
+    color: "brown",
+  },
+  makeTest: function() {
+    console.log("Test done");
+  }
+};
+
+myHouse.makeTest();
+*/
+
+//021. Массивы и псевдомассивы *************************************************
